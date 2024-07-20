@@ -1,0 +1,24 @@
+$color-black: #000000;
+$color-silver: #cccccc;
+$color-white: #ffffff;
+
+$color-emerald: #41b883;
+$color-fiord: #34495e;
+$color-cardinal: #c51b36;
+
+$color-transparent-white: rgba($color-white, 0%);
+
+$color-black-25: rgba($color-black, 25%);
+
+$color-neutral: $color-silver;
+$color-neutral-light: lighten($color-neutral, 15%);
+
+$color-primary: $color-emerald;
+$color-primary-light: lighten($color-primary, 40%);
+$color-primary-dark: darken($color-primary, 10%);
+
+$color-secondary: $color-fiord;
+$color-secondary-light: lighten($color-secondary, 50%);
+
+$color-error: $color-cardinal;
+$color-error-light: lighten($color-cardinal, 50%);
