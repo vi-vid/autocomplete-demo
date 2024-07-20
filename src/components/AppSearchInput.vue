@@ -1,5 +1,4 @@
 <!-- eslint-disable vuejs-accessibility/label-has-for -->
-// eslint-disable-next-line vuejs-accessibility/click-events-have-key-events
 <template>
   <div :class="[$style.wrapper, { [$style.wrapperError]: error }, { [$style.wrapperHasValue]: searchTerm }]">
     <label :for="id" :class="[$style.icon, { [$style.iconLoading]: isLoading }]"></label>

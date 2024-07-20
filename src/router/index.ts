@@ -6,7 +6,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'dashboard',
     meta: {
-      title: 'Autocomplete Demo | Dashboard'
+      title: 'Autocomplete | MV',
     },
     component: DashboardView,
   },
