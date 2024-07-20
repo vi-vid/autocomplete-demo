@@ -54,8 +54,8 @@ const mapCityModelToSearchInputViewModel: ResultMapper = (city: CityModel): Sear
 .block {
   padding: 32px;
   position: relative;
-  background: white;
   border-radius: 64px;
+  background: $color-white;
   border: 1px solid $color-black;
 
   &Title {

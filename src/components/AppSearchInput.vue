@@ -30,6 +30,7 @@
 <script setup lang="ts">
 import AppHighlight from '@/components/AppHighlight.vue';
 import debounce from '@/utils/debounce';
+import prepareGoogleSearchURL from '@/utils/prepare-google-search-url';
 import { StoreDefinition, storeToRefs } from 'pinia';
 import { defineProps, ref, onMounted, computed } from 'vue';
 
@@ -87,15 +88,7 @@ const searchItemOnGoogle = (item: SearchInputItem) => {
   const subtitleText = item.subtitle ? ` - ${item.subtitle}` : '';
   searchTerm.value = item.title;
 
-  const url = new URL(
-    `https://www.google.com/search?q=${`${item.title}${subtitleText}`
-      .split(' ')
-      .map((word) => encodeURIComponent(word.replace(/[^a-zA-Z0-9]/g, '')))
-      .filter(Boolean)
-      .join('+')}`
-  );
-
-  window.open(url, '_blank');
+  window.open(prepareGoogleSearchURL(`${item.title}${subtitleText}`), '_blank');
 };
 
 const selectItem = (item: SearchInputItem) => {
